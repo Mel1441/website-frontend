@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/school/Login';
+
 import Dashboard from './pages/school/Dashboard';
 import LearnerProfile from './pages/school/LearnerProfile'
 
