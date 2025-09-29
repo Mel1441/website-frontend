@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export async function loginUser(email: string, password: string) {
+export async function loginUser(username: string, password: string) {
   try {
-    const response = await axios.post("/auth/login", { email, password });
+    const response = await axios.post("/auth/login", { username, password });
     const { access_token, role } = response.data;
 
     // Store token securely
@@ -16,7 +16,7 @@ export async function loginUser(email: string, password: string) {
 }
 
 interface RegisterPayload {
-  email: string;
+  username: string;
   password: string;
   role: string;
   schoolId?: string;

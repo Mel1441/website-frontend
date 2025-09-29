@@ -2,7 +2,7 @@ import { ChangeEvent, FC } from 'react';
 
 interface Props {
   label: string;
-  type: 'email' | 'password';
+  type: 'username' | 'password';
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
