@@ -27,7 +27,7 @@ export default function LoginPage() {
       form.append('username', username);
       form.append('password', password);
       console.log(API_BASE)
-      const res = await fetch(`${API_BASE}/auth/auth/login`, {
+      const res = await fetch(`${API_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: form,

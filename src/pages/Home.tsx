@@ -1,70 +1,20 @@
-// src/components/Home.jsx
-import React, { useEffect, useState } from 'react';
-import api from '../api/axios';
-//import avatar from '../assets/avatar.png'; // if you're using a local image
+import { Link } from 'react-router-dom';
 
-const Home = () => {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    api.get('/models/ping')
-      .then(res => setMessage(res.data.message))
-      .catch(err => console.error('Backend error:', err));
-  }, []);
-
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-violet-50 text-gray-800 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold text-violet-500">Welcome</h1>
-        <p className="mt-2 text-lg text-gray-600">
-          Under Construction
-        </p>
-      </header>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold mb-4">Welcome to My Portfolio</h1>
 
-      <section className="grid gap-8 md:grid-cols-2">
-        <div className="p-6 bg-white shadow rounded">
-          <h2 className="text-xl font-semibold text-indigo-500">🧠 Placeholder</h2>
-          <p className="mt-2 text-sm text-gray-700">
-            under construction
-          </p>
-        </div>
+      <p className="mb-6">
+        I build secure, modular, and audit-friendly systems. Here's a preview of a login flow I designed:
+      </p>
 
-        <div className="p-6 bg-white shadow rounded">
-          <h2 className="text-xl font-semibold text-indigo-500">🔍 Placeholder</h2>
-          <p className="mt-2 text-sm text-gray-700">
-            under construction
-          </p>
-        </div>
-
-        <div className="p-6 bg-white shadow rounded">
-          <h2 className="text-xl font-semibold text-indigo-500">📄 Placeholder</h2>
-          <p className="mt-2 text-sm text-gray-700">
-            under construction
-          </p>
-        </div>
-
-        <div className="p-6 bg-white shadow rounded">
-          <h2 className="text-xl font-semibold text-indigo-500">🧒 School Portal</h2>
-          <p className="mt-2 text-sm text-gray-700">
-            under construction
-          </p>
-        </div>
-      </section>
-
-      <footer className="mt-16 text-sm text-gray-500 text-center">
-        © 2025 Melissa’s Modular Lab. Built with reproducibility and semantic clarity.
-      </footer>
-    </main>
+      <Link
+        to="/school/login"
+        className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >
+        View Login Demo
+      </Link>
+    </div>
   );
-};
-export default Home;
-
-
-//export default function Home() {
- // return (
-  //  <div>
-  //    <h2>Welcome to the Modular Lab</h2>
-  //    <p>This is a placeholder homepage. More coming soon!</p>
-  //  </div>
- // );
-//}
+}
