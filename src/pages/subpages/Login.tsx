@@ -9,15 +9,15 @@ import CTASection from '../../components/school/CTASection';
 
 
 export default function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError]     = useState('');
-  const [loading, setLoading] = useState(false);
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [error, setError]     = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   // read the right API URL
   const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setLoading(true);
     setError('');
@@ -57,14 +57,14 @@ export default function LoginPage() {
         label="Username"
         type="text"
         value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}
       />
 
       <InputGroup
         label="Password"
         type="password"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
       />
 
       <CTASection loading={loading} />
