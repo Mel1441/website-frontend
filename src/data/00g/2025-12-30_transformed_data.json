@@ -2,6 +2,6 @@
   "totalCarbs": "95.0",
   "minBG": "60",
   "countCarbs": 1,
-  "basalIncrease": "No Data",
-  "basalDecrease": "No Data"
+  "basalIncrease": 0.25416666666666665,
+  "basalDecrease": 0.17291666666666666
 }
