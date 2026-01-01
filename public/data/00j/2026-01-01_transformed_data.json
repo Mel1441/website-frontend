@@ -1,7 +1,7 @@
 {
-  "totalCarbs": "200.0",
-  "minBG": "103",
-  "countCarbs": 4,
-  "basalIncrease": 0.19330855018587362,
-  "basalDecrease": 0.22304832713754646
+  "totalCarbs": "235.0",
+  "minBG": "78",
+  "countCarbs": 5,
+  "basalIncrease": 0.2411764705882353,
+  "basalDecrease": 0.21568627450980393
 }
